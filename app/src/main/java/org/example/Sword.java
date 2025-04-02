@@ -11,6 +11,4 @@ public class Sword implements Weapon{
     public void attack() {
         System.out.println("칼로 찔렀다 ");
     }
-
-
 }

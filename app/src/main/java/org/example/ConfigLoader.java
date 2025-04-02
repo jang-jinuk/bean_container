@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 class ConfigLoader {
+    private ConfigLoader(){}
+
     private static Properties properties = new Properties();
     static {
         try (InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties")) {
