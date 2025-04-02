@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 의존성 주입할 Bean 정의 -->
+    <bean id="sword" class="org.example.Sword"/>
+    <bean id="bow" class="org.example.Bow"/>
+
+    <bean id="human1" class="org.example.Human">
+        <constructor-arg ref= "sword"/>
+        <constructor-arg value= "human1"/>
+    </bean>
+    <bean id="human2" class="org.example.Human">
+        <constructor-arg ref= "bow"/>
+        <constructor-arg value= "human2"/>
+    </bean>
+</beans>
